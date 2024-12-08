@@ -1,0 +1,21 @@
+.header{
+    background-color: #680E4B;
+    width: 100%;
+    height: 60px;
+    position: fixed; 
+}
+
+.text1{
+    color: #E9E6FF;
+    display: inline;
+    float: left;
+    justify-content: space-between;
+}
+
+.text{
+    color: #E9E6FF;
+    display: inline;
+    float: right;
+    justify-content: space-between;
+    margin: 10px;
+}
