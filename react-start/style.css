@@ -77,7 +77,20 @@
     margin-top: 15%;
     margin-right: 50%;
     font-family: 'Gabriola';
-    font-size: 180%;
+    font-size: 200%;
     line-height: 130%;
     color: #680E4B;
   }
+
+  .more-content {
+    display: none;
+}
+.btn-more {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+}
