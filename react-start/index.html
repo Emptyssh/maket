@@ -14,20 +14,77 @@
     <nav>
         <p class="text1">Коржик</p>
       <ul>
-        <a href="content1" class="text">Контакты</a>
-        <a href="content2" class="text">Меню</a>
-        <a href="content3" class="text">О нас</a>
-        <a href="content4" class="text">Главная</a>
+        <a href="#content1" class="text">Контакты</a>
+        <a href="#content2" class="text">Меню</a>
+        <a href="#content3" class="text">О нас</a>
+        <a href="#content4" class="text">Главная</a>
       </ul>
       <div class="search-container">
         <img src="img/лупа 1.png" alt="search icon" class="img">
         <input type="text">
       </div>
+      <img src="img/иконка.png" class="open-button" onclick="openForm()">
+
+<div class="form-popup" id="myForm">
+  <form action="#" class="form-container">
+    <h1 class="h1">Зарегистрироваться</h1>
+
+    <label for="name"><b class="label">Имя</b></label>
+    <input type="text" placeholder="Ваше имя" name="name" required style="    font-size: 20px;
+    font-family: 'Gabriola'; color: #42033D;">
+  
+  <label for="email"><b class="label">Е-мейл</b></label>
+    <input type="text" placeholder="Ваш е-мейл" name="email" required style="    font-size: 20px;
+    font-family: 'Gabriola'; color: #42033D;">
+
+    <a href="#myForm1">У вас нет аккаунта? Зарегистрироваться</a>
+
+    <button type="submit" class="btn">Отправить</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Закрыть</button>
+  </form>
+</div>
+<script>
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+<div class="form-popup" id="myForm1">
+  <form action="#" class="form-container">
+    <h1 class="h1">Зарегистрироваться</h1>
+
+    <label for="name"><b class="label">Имя</b></label>
+    <input type="text" placeholder="Ваше имя" name="name" required style="    font-size: 20px;
+    font-family: 'Gabriola'; color: #42033D;">
+  
+  <label for="email"><b class="label">Е-мейл</b></label>
+    <input type="text" placeholder="Ваш е-мейл" name="email" required style="    font-size: 20px;
+    font-family: 'Gabriola'; color: #42033D;">
+
+<a href="#myForm" style="text-decoration: none;">Я уже зарегистрирован</a>
+
+    <button type="submit" class="btn">Отправить</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Закрыть</button>
+  </form>
+</div>
+<script>
+  function openForm() {
+    document.getElementById("myForm1").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("myForm1").style.display = "none";
+}
+</script>
     </nav>
 </header>
 </div>
 </div>
-<article>
+<article id="content4">
   <div class="content">
 <p class="p" style="display: inline-block;">Выпечка - это искусство, которое пробуждает чувства и радует сердце. Это процесс, во время которого обыденные ингредиенты превращаются в шедевры, наполняющие дом ароматами и уютом. Каждый шаг - от смешивания муки и яиц до запекания в духовке - наполнен тщательностью и любовью, создавая нечто уникальное<span id="dots">...</span><span id="more" class="more-content">и шедевральное. Она объединяет людей за столом, создавая моменты радости и уюта. Будь то простой хлеб или сложный торт, каждый кусочек выпечки несет в себе тепло и заботу того, кто его приготовил.</span></p>
 <img src="img/cake.png" class="img3">
@@ -51,24 +108,226 @@
   }
 </script>
 </article>
-<section>
+<section id="content3">
   <p class="p1">О нас</p>
   <div class="images row">
     <div class="p2">
     <img src="img/дизайн.png" style="border-radius: 10%;">
-    <p>Дверь пекарни распахивается, и вы входите в уютное пространство, наполненное ароматами свежеиспеченного хлеба и сладких десертов...</p>
+    <p style="display: inline-block;">Дверь пекарни распахивается, и вы входите в уютное пространство, наполненное ароматами свежеиспеченного хлеба и сладких десертов<span id="dots1">...</span><span id="more1" class="more-content">. Внутри пекарни царит теплая и дружелюбная атмосфера. Светлые деревянные столы и стулья создают ощущение домашнего уюта, а открытая кухня позволяет посетителям наблюдать за процессом выпечки.</span></p>
+    <button class="btn-more1" onclick="toggleContent1()">Подробнее</button>
+    <script>
+      function toggleContent1() {
+          const moreText = document.getElementById("more1");
+          const dots = document.getElementById("dots1");
+          const btn = document.querySelector(".btn-more");
+    
+          if (moreText.style.display === "none" || moreText.style.display === "") {
+              moreText.style.display = "inline";
+              dots.style.display = "none";
+              btn.innerHTML = "Скрыть";
+          } else {
+              moreText.style.display = "none";
+              dots.style.display = "inline";
+              btn.innerHTML = "Подробнее";
+          }
+      }
+    </script>
     </div>
     <div class="p2">
     <img src="img/продавец.png" style="border-radius: 10%;">
-    <p>Персонал пекарни — это настоящая команда профессионалов, чья страсть к выпечке и обслуживанию клиентов явно видна в каж...</p>
+    <p style="display: inline-block; margin-top: 5%;">Персонал пекарни — это настоящая команда профессионалов, чья страсть к выпечке и обслуживанию клиентов явно видна в каж<span id="dots2">...</span><span id="more2" class="more-content">дом. Каждый день персонал пекарни "Коржик" работает как единое целое, вкладывая душу в то, что они делают. Их дружная атмосфера и взаимоподдержка создают уникальное место, куда хочется возвращаться снова и снова.</span></p>
+    <button class="btn-more1" onclick="toggleContent2()" style="margin-top: 9%;">Подробнее</button>
+    <script>
+      function toggleContent2() {
+          const moreText = document.getElementById("more2");
+          const dots = document.getElementById("dots2");
+          const btn = document.querySelector(".btn-more");
+    
+          if (moreText.style.display === "none" || moreText.style.display === "") {
+              moreText.style.display = "inline";
+              dots.style.display = "none";
+              btn.innerHTML = "Скрыть";
+          } else {
+              moreText.style.display = "none";
+              dots.style.display = "inline";
+              btn.innerHTML = "Подробнее";
+          }
+      }
+    </script>
   </div>
   </div>
 </section>
-<menu>
+<menu id="content2">
+  <p class="p1">Меню</p>
+  <div class="slider_wrapper">
+    <a id="prev"><img src="img/image1.png" alt="prev" class="strelca"></a>
+    
+    <div class="myslide">
+      <div class="slider_item pack_1"><img src="img/синабон.jpg" alt="1">
+        <p class="p4" style="display: inline-block;">Синабоны</p>
+        <button class="btn-more3">Подробнее</button>
+        </div>
+      <div class="slider_item pack_1"><img src="img/коржик.jpg" alt="2">
+        <p class="p4" style="display: inline-block;">Коржики</p>
+        <button class="btn-more3">Подробнее</button>
+        </div>
+      <div class="slider_item pack_1"><img src="img/пончик.png" alt="3">
+        <p class="p4" style="display: inline-block;">Пончики</p>
+        <button class="btn-more3">Подробнее</button>
+        </div>
+    </div>
+    <div class="myslide">
+      <div class="slider_item pack_1"><img src="img/круассан.png" alt="1">
+        <p class="p4" style="display: inline-block;">Круассаны</p>
+        <button class="btn-more3">Подробнее</button>
+        </div>
+      <div class="slider_item pack_1"><img src="img/сочник.png" alt="2">
+        <p class="p4" style="display: inline-block;">Сочники</p>
+        <button class="btn-more3">Подробнее</button>
+        </div>
+      <div class="slider_item pack_1"><img src="img/плюшки.png" alt="3">
+        <p class="p4" style="display: inline-block;">Московские плюшки</p>
+        <button class="btn-more3">Подробнее</button>
+        </div>
+    </div> 
+    <a id="next"><img src="img/image.png" alt="next" class="strelca"></a>
+  </div>
+  <h2 id="timeVisual">
 
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+let prev = document.getElementById ('prev');
+let next = document.getElementById ('next');
+
+next.addEventListener ("click", function () {
+  showSlides(slideIndex += 1);
+  makeTimer();//Пересоздаем интервал если производится нажатие 
+});
+
+prev.addEventListener ("click", function () {
+  showSlides(slideIndex -= 1);
+  makeTimer();//Пересоздаем интервал если производится нажатие 
+});
+
+function currentSlide(r) {
+  showSlides(slideIndex = r);
+}
+
+
+function showSlides(r) {
+    let slides = document.getElementsByClassName("myslide");
+    if (r > slides.length) {
+      slideIndex = 1;
+    }
+    if (r < 1) {
+        slideIndex = slides.length;
+    }
+ 
+    for (let slide of slides) {
+        slide.style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "flex";    
+  }
+</script>
+
+
+<div class="slider_wrapper">
+  <a id="prev1"><img src="img/image1.png" alt="prev" class="strelca"></a>
+  
+  <div class="myslide1">
+    <div class="slider_item pack_1"><img src="img/раф.png" alt="1">
+    <p class="p3" style="display: inline-block;">Раф</p>
+    <a href="catalog.html"><button class="btn-more2">Подробнее</button></a>
+    </div>
+    <div class="slider_item pack_1"><img src="img/латте.png" alt="2">    
+      <p class="p3" style="display: inline-block;">Латте</p>
+      <button class="btn-more2">Подробнее</button>
+      </div>
+    <div class="slider_item pack_1"><img src="img/капучино.png" alt="3">
+      <p class="p3" style="display: inline-block;">Капучино</p>
+      <button class="btn-more2">Подробнее</button>
+      </div>
+  </div>
+  <div class="myslide1">
+    <div class="slider_item pack_1"><img src="img/шоколад.png" alt="1">
+      <p class="p3" style="display: inline-block;">Горячий шоколад</p>
+      <button class="btn-more2">Подробнее</button>
+      </div>
+    <div class="slider_item pack_1"><img src="img/зелёный чай.png" alt="2">
+      <p class="p3" style="display: inline-block;">Зелёный чай</p>
+      <button class="btn-more2">Подробнее</button>
+      </div>
+    <div class="slider_item pack_1"><img src="img/чёрный чай.png" alt="3">
+      <p class="p3" style="display: inline-block;">Чёрный чай</p>
+      <button class="btn-more2">Подробнее</button>
+      </div>
+  </div> 
+  <a id="next1"><img src="img/image.png" alt="next" class="strelca"></a>
+</div>
+<h1 id="timeVisual">
+
+<script>
+let slideIndex1 = 1;
+showSlides(slideIndex1);
+
+let prev1 = document.getElementById ('prev1');
+let next1 = document.getElementById ('next1');
+
+next1.addEventListener ("click", function () {
+showSlides(slideIndex1 += 1);
+makeTimer();//Пересоздаем интервал если производится нажатие 
+});
+
+prev1.addEventListener ("click", function () {
+showSlides(slideIndex1 -= 1);
+makeTimer();//Пересоздаем интервал если производится нажатие 
+});
+
+function currentSlide(n) {
+showSlides(slideIndex1 = n);
+}
+
+
+function showSlides(n) {
+  let slides = document.getElementsByClassName("myslide1");
+  if (n > slides.length) {
+    slideIndex1 = 1;
+  }
+  if (n < 1) {
+      slideIndex1 = slides.length;
+  }
+
+  for (let slide of slides) {
+      slide.style.display = "none";
+  }
+  slides[slideIndex1 - 1].style.display = "flex";    
+}
+</script>
 </menu>
-<footer>
-
+<footer id="content1">
+  <div class="textcols">
+    <div class="textcols-item">
+      <b class="b">Информация</b>
+      <p class="p5">Главная</p>
+      <p class="p5">О нас</p>
+      <p class="p5">Меню</p>
+      <p class="p5">Контакты</p>
+    </div>
+    <div class="textcols-item1">
+      <b class="b">Индивидуальный заказ</b>
+      <p class="p5">По поводу индивидуальных заказов обращаться к администратору по корпоративному номеру телефона.</p>
+    </div>
+    <div class="textcols-item">
+      <b class="b">Контакты</b>
+      <p class="p5">+7 (914) - 361 - 45 - 82</p>
+      <p class="p5">korjick.com</p>
+      <p class="p5">г.Чита, ул.Поднебесная 64</p>
+      <p class="p5">Ежедневно</p>
+      <p class="p5">С 7:00 До 19:00</p>
+    </div>
+  </div>
 </footer>
 </body>
 </html>

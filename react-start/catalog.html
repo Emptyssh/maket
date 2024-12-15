@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Коржик</title>
+</head>
+<body>
+    <div class="container">
+        <body class="body">
+        <div class="wrapper">
+         <header class="header">
+          <img src="img/Корж.png" class="img1">
+            <nav>
+                <p class="text1">Коржик</p>
+              <ul>
+                <a href="#content1" class="text">Контакты</a>
+                <a href="#content2" class="text">Меню</a>
+                <a href="#content3" class="text">О нас</a>
+                <a href="index.html" class="text">Главная</a>
+              </ul>
+              <div class="search-container">
+                <img src="img/лупа 1.png" alt="search icon" class="img">
+                <input type="text">
+              </div>
+              <img src="img/иконка.png" class="open-button" onclick="openForm()">
+        
+        <div class="form-popup" id="myForm">
+          <form action="#" class="form-container">
+            <h1 class="h1">Зарегистрироваться</h1>
+        
+            <label for="name"><b class="label">Имя</b></label>
+            <input type="text" placeholder="Ваше имя" name="name" required style="    font-size: 20px;
+            font-family: 'Gabriola'; color: #42033D;">
+          
+          <label for="email"><b class="label">Е-мейл</b></label>
+            <input type="text" placeholder="Ваш е-мейл" name="email" required style="    font-size: 20px;
+            font-family: 'Gabriola'; color: #42033D;">
+        
+            <a href="#myForm1">У вас нет аккаунта? Зарегистрироваться</a>
+        
+            <button type="submit" class="btn">Отправить</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Закрыть</button>
+          </form>
+        </div>
+        <script>
+          function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+        
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+        </script>
+        
+        <div class="form-popup" id="myForm1">
+          <form action="#" class="form-container">
+            <h1 class="h1">Зарегистрироваться</h1>
+        
+            <label for="name"><b class="label">Имя</b></label>
+            <input type="text" placeholder="Ваше имя" name="name" required style="    font-size: 20px;
+            font-family: 'Gabriola'; color: #42033D;">
+          
+          <label for="email"><b class="label">Е-мейл</b></label>
+            <input type="text" placeholder="Ваш е-мейл" name="email" required style="    font-size: 20px;
+            font-family: 'Gabriola'; color: #42033D;">
+        
+        <a href="#myForm" style="text-decoration: none;">Я уже зарегистрирован</a>
+        
+            <button type="submit" class="btn">Отправить</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Закрыть</button>
+          </form>
+        </div>
+        <script>
+          function openForm() {
+            document.getElementById("myForm1").style.display = "block";
+        }
+        
+        function closeForm() {
+            document.getElementById("myForm1").style.display = "none";
+        }
+        </script>
+            </nav>
+        </header>
+        </div>
+        </div>
+        
+<article>
+    <div class="content">
+        <div class="div">
+        <img src="img/раф.png" class="img4">
+        </div>
+        <p class="p7" style="display: inline-block;">Раф</p>
+        <p class="p6" style="display: inline-block;">Кофейный напиток, который готовится путём добавления нагретых паром сливок с небольшим количеством пены (0,5 см) в одиночную порцию эспрессо. Часто подаётся с сиропом. Раф-кофе похож на латте, но отличается добавлением ванильного сахара и сливок вместо молока.</span></p>
+        </div>
+        <button class="btn-more5" onclick="toggleContent()">Добавить в корзину</button>
+        <script>
+          function toggleContent() {
+              const moreText = document.getElementById("more");
+              const dots = document.getElementById("dots");
+              const btn = document.querySelector(".btn-more");
+        
+              if (moreText.style.display === "none" || moreText.style.display === "") {
+                  moreText.style.display = "inline";
+                  dots.style.display = "none";
+                  btn.innerHTML = "Скрыть";
+              } else {
+                  moreText.style.display = "none";
+                  dots.style.display = "inline";
+                  btn.innerHTML = "Подробнее";
+              }
+          }
+        </script>
+        </article>
+</article>
+        
+        <footer id="content1">
+            <div class="textcols1">
+              <div class="textcols-item">
+                <b class="b">Информация</b>
+                <p class="p5">Главная</p>
+                <p class="p5">О нас</p>
+                <p class="p5">Меню</p>
+                <p class="p5">Контакты</p>
+              </div>
+              <div class="textcols-item1">
+                <b class="b">Индивидуальный заказ</b>
+                <p class="p5">По поводу индивидуальных заказов обращаться к администратору по корпоративному номеру телефона.</p>
+              </div>
+              <div class="textcols-item">
+                <b class="b">Контакты</b>
+                <p class="p5">+7 (914) - 361 - 45 - 82</p>
+                <p class="p5">korjick.com</p>
+                <p class="p5">г.Чита, ул.Поднебесная 64</p>
+                <p class="p5">Ежедневно</p>
+                <p class="p5">С 7:00 До 19:00</p>
+              </div>
+            </div>
+          </footer>
+</body>
+</html>
